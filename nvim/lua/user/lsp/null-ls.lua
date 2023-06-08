@@ -11,13 +11,14 @@ local augroup = vim.api.nvim_create_augroup("LspFormatting", {})
 null_ls.setup({
   debug = true,
   sources = {
-    diagnostics.checkmake, diagnostics.golangci_lint, diagnostics.solhint,
+    diagnostics.checkmake, diagnostics.golangci_lint,
     diagnostics.write_good, diagnostics.zsh, formatting.autopep8,
     formatting.fixjson, formatting.goimports_reviser, formatting.golines,
     formatting.isort, formatting.lua_format, formatting.markdown_toc,
     formatting.mdformat, formatting.yamlfmt,
     formatting.rustfmt.with({ extra_args = { "--edition=2021" } }),
     diagnostics.cpplint, formatting.clang_format,
+    formatting.forge_fmt,
   },
   on_attach = function(client, bufnr)
     if client.supports_method("textDocument/formatting") then
