@@ -13,7 +13,7 @@ end
 
 local servers = {
   "lua_ls", "rust_analyzer", "eslint", "tsserver", "pyright", "bashls",
-  "jsonls", "yamlls", "gopls", "solidity", "marksman", "clangd", "texlab"
+  "jsonls", "yamlls", "gopls", "solidity_ls_nomicfoundation", "marksman", "clangd", "texlab"
 }
 
 local settings = {
